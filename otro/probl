@@ -1,0 +1,36 @@
+Un destacamento militar formado por 40 soldados de Ingenieros, 36 especialistas dinamiteros, 88 antiguerrilleros, y 120 infantes como tropa de apoyo, ha de transportarse hasta una posición estratégica importante. En el parque de la base se dispone de 4 tipos de vehículos A, B, C, y D, acondicionados para transporte de tropas. El número de personas que cada vehículo puede transportar es 10, 7, 6, y 9, de la forma en que se detalla en la siguiente tabla:
+  	Ingenieros 	Dinamiteros 	Antiguerrillas 	Infantes
+A 	3 	2 	1 	4
+B 	1 	1 	2 	3
+C 	2 	1 	2 	1
+D 	3 	2 	3 	1
+
+Los gastos de gasolina de cada vehículo hasta el punto de destino se estiman en 160, 80, 40, y 120 litros respectivamente. Si queremos ahorrar gasolina, ¿cuántos vehículos de cada tipo habrá que utilizar para que el gasto de combustible sea el mínimo posible?
+
+ 
+
+Se determinan las variables de decisión y se representan algebraicamente. En este caso:
+
+    Xi: número de vehículos de cada tipo que se usen
+
+    X1: número de vehículos de tipo A
+    X2: número de vehículos de tipo B
+    X3: número de vehículos de tipo C
+    X4: número de vehículos de tipo D
+
+Se determinan las restricciones y se expresan como ecuaciones o inecuaciones de las variables de decisión. Dichas restricciones se deducen de los soldados que deben ser transportados:
+
+    Ingenieros: 3·X1 + X2 + 2·X3 + 3·X4 ≥ 40
+    Dinamiteros: 2·X1 + X2 + X3 + 2·X4 ≥ 36
+    Antiguerrillas: X1 + 2·X2 + 2·X3 + 3·X4 ≥ 88
+    Infantes: 4·X1 + 3·X2 + X3 + X4 ≥ 120
+
+Se expresan todas las condiciones implícitamente establecidas por la naturaleza de las variables: que no puedan ser negativas, que sean enteras, que solo puedan tomar determinados valores, ... En este caso las restricciones son que la cantidad de vehículos no puede ser negativa y debe ser además un número entero:
+
+    Xi ≥ 0
+    Xi son enteros
+
+Se determina la función objetivo:
+
+    Minimizar Z = 160·X1 + 80·X2 + 40·X3 + 120·X4
+]

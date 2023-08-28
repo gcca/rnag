@@ -1,0 +1,26 @@
+#!/bin/awk
+{
+	gsub("X","crms",$0)
+	if(sub(" < "," >= ",$0))
+		print $0 "||"
+	else {
+		if(sub(" > "," <= ",$0))
+			print $0 "||"
+		else {
+			if(sub(" >= "," < ",$0))
+				print $0 "||"
+			else {
+				if(sub(" <= "," > ",$0))
+					print $0 "||"
+				else {
+					if(sub(" = "," != ",$0))
+						print $0 "||"
+					else {
+						print $0 "||"
+					}
+				}
+			}
+		}
+	}
+}
+END{print "0"}

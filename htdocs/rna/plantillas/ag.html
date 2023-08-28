@@ -1,0 +1,18 @@
+<html>
+	<body>
+
+		<form action="/gcca/ag/" method="post">
+			{{ form.as_p }}
+			<input type="submit" value="Evaluar" />
+		</form>
+
+		<form action="/gcca/rna/ini/" method="post">
+			<input type="submit" value="X" />
+		</form>
+
+		{% if resultado %}
+		<iframe src="/media/feo.txt" />
+		{% endif %}
+
+	</body>
+</html>

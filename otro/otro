@@ -1,0 +1,9 @@
+#!/bin/sh
+#echo $@
+awk -f parres $1 > /dev/shm/feo.c 2> /dev/null
+gcc -O3 -s -fPIC -shared /dev/shm/feo.c -Wl,-soname,feo.so -o/dev/shm/feo.so
+#rm /dev/shm/feo.c
+#for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+#do
+		LD_LIBRARY_PATH=/dev/shm ./a.out
+#done

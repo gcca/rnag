@@ -1,0 +1,25 @@
+#!/bin/awk
+BEGIN{print "#include <math.h>\n#define l &&";nv=-1}{
+if(NR==1){
+	if(match($0,"max")){
+		print "int CRT=1;"
+	} else if(match($0,"min")){
+		print "int CRT=0;"
+	}
+	$0=substr($0,5)
+	print "#define o \\"
+	sr=$0
+	while((ss=substr(sr,2+match(sr,"x.[0-9]+\]")))){
+		p=match(ss,"\]")
+		ov=substr(ss,0,p-1)
+		if(ov>nv)nv=ov
+		sr=substr(ss,match(ss,"x.[0-9]+"))
+	}
+	print $0,"\n#define r \\"
+	getline
+	ORS=""
+	printf $0
+}else{
+	print " l \\\n" $0
+}}
+END{print "\nint CN="nv+1";double(rf)(double*x){return(r);}double(of)(double*x){return(o);}"}

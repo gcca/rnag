@@ -1,0 +1,26 @@
+<html>
+	<body>
+
+		{% comment %}
+		{% if form.is_multipart %}
+		<form enctype="multipart/form-data" action="/rna/" method="post">
+		{% else %}
+		<formx action="" method="post">
+		{% endif %}
+		{% endcomment %}
+
+		<form action="/gcca/rna/" method="post">
+			{{ form.as_p }}
+			<input type="submit" value="Evaluar" />
+		</form>
+
+		<form action="/gcca/rna/ini/" method="post">
+			<input type="submit" value="X" />
+		</form>
+
+		{% if resultado %}
+		<img src="/media/uno.png" style="height:120%;width:100%" />
+		{% endif %}
+
+	</body>
+</html>
